@@ -20,11 +20,30 @@ var WTF = (function() {
 
     var templates;
     var responses;
-    var firstnames;
-    var lastnames;
     var corpus;
     var regex;
     var dom;
+
+    var firstname;
+    var lastname;
+
+    var dragonbornfirstnames;
+    var dragonbornlastnames;
+    var dwarffirstnames;
+    var dwarflastnames;
+    var elffirstnames;
+    var elflastnames;
+    var gnomefirstnames;
+    var gnomelastnames;
+    var halflingfirstnames;
+    var halflinglastnames;
+    var halforcfirstnames;
+    var halforclastnames;
+    var humanfirstnames;
+    var humanlastnames;
+    var tieflingfirstnames;
+    var tieflinglastnames;
+
 
     /*
       ------------------------------------------------------------
@@ -40,13 +59,46 @@ var WTF = (function() {
 
         templates = corpus.template;
         responses = corpus.response;
-        firstnames = corpus.firstname;
-        lastnames = corpus.lastname;
 
         delete corpus.template;
         delete corpus.response;
-        delete corpus.firstname;
-        delete corpus.lastname;
+
+        // Name generator
+
+        dragonbornfirstnames = corpus.dragonbornfirstname;
+        dragonbornlastnames = corpus.dragonbornlastname;
+        dwarffirstnames = corpus.dwarffirstname;
+        dwarflastnames = corpus.dwarflastname;
+        elffirstnames = corpus.elffirstname;
+        elflastnames = corpus.elflastname;
+        gnomefirstnames = corpus.gnomefirstname;
+        gnomelastnames = corpus.gnomelastname;
+        halflingfirstnames = corpus.halflingfirstname;
+        halflinglastnames = corpus.halflinglastname;
+        halforcfirstnames = corpus.halforcfirstname;
+        halforclastnames = corpus.halforclastname;
+        humanfirstnames = corpus.humanfirstname;
+        humanlastnames = corpus.humanlastname;
+        tieflingfirstnames = corpus.tieflingfirstname;
+        tieflinglastnames = corpus.tieflinglastname;
+
+        delete corpus.dragonbornfirstname;
+        delete corpus.dragonbornlastname;
+        delete corpus.dwarffirstname;
+        delete corpus.dwarflastname;
+        delete corpus.elffirstname;
+        delete corpus.elflastname;
+        delete corpus.gnomefirstname;
+        delete corpus.gnomelastname;
+        delete corpus.halflingfirstname;
+        delete corpus.halflinglastname;
+        delete corpus.halforcfirstname;
+        delete corpus.halforclastname;
+        delete corpus.humanfirstname;
+        delete corpus.humanlastname;
+        delete corpus.tieflingfirstname;
+        delete corpus.tieflinglastname;
+
 
         // Enable UI and generate first idea
 
@@ -236,12 +288,44 @@ var WTF = (function() {
             item = regex.exec( idea );
         }
 
+
+
+
+         if (idea.includes("Эльф") == true) {
+           firstname = randomItem( elffirstnames );
+           lastname = randomItem( elflastnames );
+         } else if (idea.includes("Дварф") == true) {
+           firstname = randomItem( dwarffirstnames );
+           lastname = randomItem( dwarflastnames );
+         // } else if (idea.includes("Гном") == true) {
+         //   firstname = randomItem( gnomefirstnames );
+         //   lastname = randomItem( gnomelastnames );
+         // } else if (idea.includes("Драконорожденный") == true) {
+         //   firstname = randomItem( dragonbornfirstnames );
+         //   lastname = randomItem( dragonbornlastnames );
+         // } else if (idea.includes("Полу-орк") == true) {
+         //   firstname = randomItem( halforcfirstnames );
+         //   lastname = randomItem( halforclastnames );
+         // } else if (idea.includes("Полу-эльф") == true) {
+         //   firstname = randomItem( halfelffirstnames );
+         //   lastname = randomItem( halfelflastnames );
+         // } else if (idea.includes("Тифлинг") == true) {
+         //   firstname = randomItem( tieflingfirstnames );
+         //   lastname = randomItem( tieflinglastnames );
+         // } else if (idea.includes("Полурослик") == true) {
+         //   firstname = randomItem( halflingfirstnames );
+         //   lastname = randomItem( halflinglastnames );
+         } else {
+           firstname = randomItem( humanfirstnames );
+           lastname = randomItem( humanlastnames );
+         }
+
         // Update output
 
         dom.generate.text( randomItem( responses ) );
         dom.output.html(
             '<dl>' +
-                '<dt>' + randomItem( firstnames ) + ' ' + randomItem( lastnames ) + '</dt>' +
+                '<dt>' + firstname + ' ' + lastname + '</dt>' +
                 '<dd>' + idea + '</dd>' +
             '</dl>'
         );
