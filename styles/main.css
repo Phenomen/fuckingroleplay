@@ -32,6 +32,10 @@ header, article {
 	color: #000;
 }
 
+dt {
+	color: #b71c1c;
+}
+
 header {
 	margin-top: 70px;
 }
@@ -69,14 +73,14 @@ noscript {
 }
 
 #generate {
-	text-decoration: none;
+	text-decoration: underline;
 	font-size: 20px;
 	color: #000;
 }
 
 #generate:hover {
 	text-decoration: underline;
-	color: black;
+	color: #b71c1c;
 }
 
 aside {
@@ -94,7 +98,7 @@ aside {
 #share-facebook {}
 #share-twitter {position: relative; top: -1px;}
 .twitter-share-button {
-	font-size: 11px;	
+	font-size: 11px;
 	color: #000;
 }
 
