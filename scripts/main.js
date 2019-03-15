@@ -6,20 +6,32 @@ $(function() {
     WTF.init({
 
         heading: [
-            "I'm going to roll the stats for a fucking",
-            "Check this shit out, I'm going to be a fucking",
-            "You think your character is cool? My character is a fucking",
+            "Я буду ролять блядским",
+            "Зацени это дерьмо, я",
+            "Твой персонаж полная херня, а мой",
+            "Похуй, буду гамать",
+            "Заебись, я",
         ],
         response: [
-            "That sounds fucking terrible",
-            "Give me a-fucking-nother one",
-            "I don't really give a fuck about that guy",
-            "I've already fucking roleplayed that one",
-            "That doesn't make any fucking sense",
+            "Хуйня",
+            "Хуита",
+            "Херня",
+            "Блядство",
+            "Гомогейство",
+            "Жопа",
+            "Говно",
+            "Дерьмо",
+            "Лажа",
+            "Трэш",
+            "Ссанина",
+            "Уебанство",
+            "В топку",
+            "Мудно",
+            "Пиздец",
         ],
 
         template: [
-            "@adjective @race @dclass from @location who @backstory",
+            "@adjective @race @dclass из @location, который @backstory",
         ],
 
         adjective: [
@@ -739,4 +751,4 @@ $(function() {
     // @see https://support.google.com/drive/answer/37579?hl=en
     // WTF.init( '0AvG1Hx204EyydF9ub1M2cVJ3Z1VGdDhTSWg0ZV9LNGc' );
 
-}); 
+});
