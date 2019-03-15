@@ -63,43 +63,6 @@ var WTF = (function() {
         delete corpus.template;
         delete corpus.response;
 
-        // Name generator
-
-        dragonbornfirstnames = corpus.dragonbornfirstname;
-        dragonbornlastnames = corpus.dragonbornlastname;
-        dwarffirstnames = corpus.dwarffirstname;
-        dwarflastnames = corpus.dwarflastname;
-        elffirstnames = corpus.elffirstname;
-        elflastnames = corpus.elflastname;
-        gnomefirstnames = corpus.gnomefirstname;
-        gnomelastnames = corpus.gnomelastname;
-        halflingfirstnames = corpus.halflingfirstname;
-        halflinglastnames = corpus.halflinglastname;
-        halforcfirstnames = corpus.halforcfirstname;
-        halforclastnames = corpus.halforclastname;
-        humanfirstnames = corpus.humanfirstname;
-        humanlastnames = corpus.humanlastname;
-        tieflingfirstnames = corpus.tieflingfirstname;
-        tieflinglastnames = corpus.tieflinglastname;
-
-        delete corpus.dragonbornfirstname;
-        delete corpus.dragonbornlastname;
-        delete corpus.dwarffirstname;
-        delete corpus.dwarflastname;
-        delete corpus.elffirstname;
-        delete corpus.elflastname;
-        delete corpus.gnomefirstname;
-        delete corpus.gnomelastname;
-        delete corpus.halflingfirstname;
-        delete corpus.halflinglastname;
-        delete corpus.halforcfirstname;
-        delete corpus.halforclastname;
-        delete corpus.humanfirstname;
-        delete corpus.humanlastname;
-        delete corpus.tieflingfirstname;
-        delete corpus.tieflinglastname;
-
-
         // Enable UI and generate first idea
 
         initUI();
@@ -289,43 +252,12 @@ var WTF = (function() {
         }
 
 
-
-
-         if (idea.includes("Эльф") == true) {
-           firstname = randomItem( elffirstnames );
-           lastname = randomItem( elflastnames );
-         } else if (idea.includes("Дварф") == true) {
-           firstname = randomItem( dwarffirstnames );
-           lastname = randomItem( dwarflastnames );
-         // } else if (idea.includes("Гном") == true) {
-         //   firstname = randomItem( gnomefirstnames );
-         //   lastname = randomItem( gnomelastnames );
-         // } else if (idea.includes("Драконорожденный") == true) {
-         //   firstname = randomItem( dragonbornfirstnames );
-         //   lastname = randomItem( dragonbornlastnames );
-         // } else if (idea.includes("Полу-орк") == true) {
-         //   firstname = randomItem( halforcfirstnames );
-         //   lastname = randomItem( halforclastnames );
-         // } else if (idea.includes("Полу-эльф") == true) {
-         //   firstname = randomItem( halfelffirstnames );
-         //   lastname = randomItem( halfelflastnames );
-         // } else if (idea.includes("Тифлинг") == true) {
-         //   firstname = randomItem( tieflingfirstnames );
-         //   lastname = randomItem( tieflinglastnames );
-         // } else if (idea.includes("Полурослик") == true) {
-         //   firstname = randomItem( halflingfirstnames );
-         //   lastname = randomItem( halflinglastnames );
-         } else {
-           firstname = randomItem( humanfirstnames );
-           lastname = randomItem( humanlastnames );
-         }
-
         // Update output
 
         dom.generate.text( randomItem( responses ) );
         dom.output.html(
             '<dl>' +
-                '<dt>' + firstname + ' ' + lastname + '</dt>' +
+
                 '<dd>' + idea + '</dd>' +
             '</dl>'
         );
