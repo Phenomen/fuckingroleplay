@@ -37,18 +37,18 @@ dt {
 }
 
 header {
-	margin-top: 70px;
+	margin-top: 60px;
 }
 
 header h1 {
-	font-size: 60px;
-	line-height: 60px;
+	font-size: 50px;
+	line-height: 50px;
 	display: none;
 }
 
 #output {
-	font-size: 48px;
-	line-height: 48px;
+	font-size: 40px;
+	line-height: 40px;
 	margin: 60px 0;
 }
 
